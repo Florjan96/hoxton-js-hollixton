@@ -63,6 +63,9 @@ render();
 function prove() {
   let appEl = document.querySelector("#app");
 
+  let prb=document.createElement('div')
+  prb.className='problem'
+
 
   for (let items of state.store) {
     //     <div class="post">
@@ -71,8 +74,7 @@ function prove() {
     //   <div class="description">Crewneck T-Shirt 3-Pack</div>
     //   <div class="price">$21.99</div>
     // </div>
-let prb=document.createElement('div')
-prb.className='problem'
+
 
     let post = document.createElement("div");
     post.className = "post";
@@ -90,7 +92,7 @@ prb.className='problem'
 
     let price = document.createElement("div");
     price.className = "price";
-    price.textContent = items.price
+    price.textContent ='$'+ items.price
 
     imageDiv.append(img);
     post.append(imageDiv, description, price);
@@ -99,4 +101,45 @@ prb.className='problem'
   }
 }
 
+function whenClickEl(){
 
+  let post = document.createElement("div");
+  post.className = "post";
+  post.addEventListener('click',()=>{
+    let appEl = document.querySelector("#app");
+    appEl.textContent=''
+
+    let prb=document.createElement('div')
+    prb.className='problem'
+    
+   
+
+    let imageDiv = document.createElement("div");
+    imageDiv.className = "image";
+
+    let img = document.createElement("img");
+    img.src = items.image
+    
+
+    let description = document.createElement("div");
+    description.className = "description";
+    description.textContent = items.name
+
+    let price = document.createElement("div");
+    price.className = "price";
+    price.textContent ='$'+ items.price
+
+    imageDiv.append(img);
+    post.append(imageDiv, description, price);
+    prb.append(post)
+    appEl.append(prb);
+   
+
+
+
+
+  })
+
+}
+
+whenClickEl()

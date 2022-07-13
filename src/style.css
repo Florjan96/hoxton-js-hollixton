@@ -36,5 +36,16 @@
 
 .problem{
   display:grid;
-  grid-template-columns:1fr 1fr   ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.description{
+ color:rgb(34, 34, 110);
+font-weight: bold;
+}
+
+.price{
+  color:rgb(34, 34, 110);
+  font-weight: bold;
+
 }
