@@ -29,3 +29,12 @@
   align-items: center;
   place-items: center;
 }
+
+.image img{
+  width:270px;
+}
+
+.problem{
+  display:grid;
+  grid-template-columns:1fr 1fr   ;
+}
